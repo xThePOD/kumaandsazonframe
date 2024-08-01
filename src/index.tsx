@@ -1,12 +1,12 @@
 import { serveStatic } from '@hono/node-server/serve-static'
 import { Button, Frog, TextInput } from 'frog'
 import { devtools } from 'frog/dev'
-// import { neynar } from 'frog/hubs'
+import { neynar } from 'frog/hubs'
 
 export const app = new Frog({
   // Supply a Hub to enable frame verification.
-  // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' })
-  title: 'Frog Frame',
+  hub: neynar({ apiKey: '0D6B6425-87D9-4548-95A2-36D107C12421' }),
+  title: 'First Frame',
 })
 
 app.use('/*', serveStatic({ root: './public' }))
